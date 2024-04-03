@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <div class="icon-container">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="./youtube-icon.jpg" alt="brand-logo">
+            </div>
+        </div>
+        <div class="nav-searchbar">
+            <input type="text" name="searchbar" placeholder="Search">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="icon-container">
+                <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="icon-container">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <div class="profile-icon">
+                <!-- placeholder img -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                    alt="profile-img">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="sidebar">
+            <div class="sidebar-home">
+                <div class="home">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </div>
+                <div class="shorts">
+                    <i class="fa-solid fa-bolt"></i>
+                    Shorts
+                </div>
+                <div class="subscriptions">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M8.50989 2.00001H15.49C15.7225 1.99995 15.9007 1.99991 16.0565 2.01515C17.1643 2.12352 18.0711 2.78958 18.4556 3.68678H5.54428C5.92879 2.78958 6.83555 2.12352 7.94337 2.01515C8.09917 1.99991 8.27741 1.99995 8.50989 2.00001Z"
+                                fill="#000000"></path>
+                            <path
+                                d="M6.31052 4.72312C4.91989 4.72312 3.77963 5.56287 3.3991 6.67691C3.39117 6.70013 3.38356 6.72348 3.37629 6.74693C3.77444 6.62636 4.18881 6.54759 4.60827 6.49382C5.68865 6.35531 7.05399 6.35538 8.64002 6.35547H15.5321C17.1181 6.35538 18.4835 6.35531 19.5639 6.49382C19.9833 6.54759 20.3977 6.62636 20.7958 6.74693C20.7886 6.72348 20.781 6.70013 20.773 6.67691C20.3925 5.56287 19.2522 4.72312 17.8616 4.72312H6.31052Z"
+                                fill="#000000"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.3276 7.54204H8.67239C5.29758 7.54204 3.61017 7.54204 2.66232 8.52887C1.71447 9.5157 1.93748 11.0403 2.38351 14.0896L2.80648 16.9811C3.15626 19.3724 3.33115 20.568 4.22834 21.284C5.12553 22 6.4488 22 9.09534 22H14.9046C17.5512 22 18.8745 22 19.7717 21.284C20.6689 20.568 20.8437 19.3724 21.1935 16.9811L21.6165 14.0896C22.0625 11.0404 22.2855 9.51569 21.3377 8.52887C20.3898 7.54204 18.7024 7.54204 15.3276 7.54204ZM14.5812 15.7942C15.1396 15.4481 15.1396 14.5519 14.5812 14.2058L11.2096 12.1156C10.6669 11.7792 10 12.2171 10 12.9099V17.0901C10 17.7829 10.6669 18.2208 11.2096 17.8844L14.5812 15.7942Z"
+                                fill="#000000"></path>
+                        </g>
+                    </svg>
+                    Subscriptions
+                </div>
+            </div>
+            <hr>
+            <div class="sidebar-you">
+                <div class="you-text">You
+                    <i id="expand-icon" class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="your-channel">
+                    <i class="fa-regular fa-circle-user"></i>
+                    Your channel
+                </div>
+                <div class="history">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    History
+                </div>
+                <div class="playlists">
+                    <svg viewBox="0 0 1024 1024" height="24px" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M109.632 673.664h519.68c25.152 0 45.568-22.016 45.568-48.896 0-26.88-20.416-48.896-45.568-48.896h-519.68c-25.216 0-45.632 22.016-45.632 48.896 0 26.88 20.48 48.896 45.632 48.896z m0-228.096h519.68c25.152 0 45.568-21.952 45.568-48.896 0-26.88-20.416-48.896-45.568-48.896h-519.68c-25.216 0-45.632 22.016-45.632 48.896 0 26.88 20.48 48.896 45.632 48.896z m3.264-219.904h795.776c26.88 0 50.56-20.352 51.328-47.168A48.896 48.896 0 0 0 911.104 128H115.328c-26.88 0-50.56 20.416-51.328 47.168a48.896 48.896 0 0 0 48.896 50.56z m619.776 447.232V348.672L960 510.784l-227.328 162.112c0 0.768 0 0.768 0 0z m178.432 122.944H115.328c-26.88 0-50.56 20.48-51.328 47.232a48.896 48.896 0 0 0 48.896 50.496h795.776c26.88 0 50.56-20.416 51.328-47.232a48.896 48.896 0 0 0-48.896-50.496z"
+                                fill="#000000"></path>
+                        </g>
+                    </svg>
+                    Playlists
+                </div>
+                <div class="your-videos">
+                    <svg viewBox="0 0 1024 1024" height="24px" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M759.3 352h84.3c15.5 0 28.1 9.2 28.1 20.5v277.3c0 11.3-12.6 20.5-28.1 20.5h-70.3"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M843.5 695h-70.2v-49.5h70.2c1.4 0 2.5-0.2 3.3-0.4v-268c-0.9-0.2-2-0.4-3.3-0.4h-84.2v-49.5h84.3c29.6 0 52.8 19.9 52.8 45.3v277.3c0 25.4-23.3 45.2-52.9 45.2z"
+                                fill="#000000"></path>
+                            <path
+                                d="M203.5 258h531c13.7 0 24.7 11.1 24.7 24.7v457.8c0 13.7-11.1 24.7-24.7 24.7h-531c-13.7 0-24.7-11.1-24.7-24.7V282.7c-0.1-13.6 11-24.7 24.7-24.7z"
+                                fill="#FFFFFF"></path>
+                            <path
+                                d="M734.5 790h-531c-27.3 0-49.5-22.2-49.5-49.5V282.7c0-27.3 22.2-49.5 49.5-49.5h531c27.3 0 49.5 22.2 49.5 49.5v457.8c0 27.3-22.2 49.5-49.5 49.5z m-531-507.3v457.8h531V282.7h-531z"
+                                fill="#000000"></path>
+                            <path
+                                d="M595.8 521.2L407 656c-5.6 4-13.3 2.7-17.3-2.9-1.5-2.1-2.3-4.6-2.3-7.2V376.3c0-6.8 5.5-12.4 12.4-12.4 2.6 0 5.1 0.8 7.2 2.3L595.8 501c5.6 4 6.9 11.7 2.9 17.3-0.8 1.1-1.8 2.1-2.9 2.9z"
+                                fill="#ffffff"></path>
+                            <path
+                                d="M399.9 683c-2.1 0-4.1-0.2-6.2-0.5-9.8-1.6-18.4-7-24.1-15.1-4.5-6.3-6.9-13.8-6.9-21.6V376.3c0-20.5 16.6-37.1 37.1-37.1 7.8 0 15.2 2.4 21.6 6.9l188.8 134.8c8.1 5.8 13.4 14.3 15 24.1 1.6 9.8-0.6 19.6-6.4 27.7-2.4 3.4-5.3 6.3-8.7 8.7L421.3 676.2c-6.3 4.5-13.8 6.8-21.4 6.8z m12.2-282.6v221.5l155.1-110.7-155.1-110.8zM581.4 501s0 0.1 0 0z"
+                                fill="#000000"></path>
+                        </g>
+                    </svg>
+                    Your videos
+                </div>
+                <div class="watch-later">
+                    <i class="fa-regular fa-clock"></i>
+                    Watch later
+                </div>
+                <div class="liked-video">
+                    <svg viewBox="0 0 24 24" height="24px" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956 3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467 3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14 9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216 12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"
+                                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </g>
+                    </svg>
+                    Liked videos
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <video
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Northern_shovelers_spinning_in_Prospect_Park.webm"
+                    controls></video>
+
+                <div class="vid-discription__container">
+                    <div class="vid-discription__channel-profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/PowerBI_Icon_set-private-10.png"
+                            alt="profile-img">
+
+                    </div>
+                    <div class="vid-description__all-text-container">
+                        <h6>Northern shovelers spinning in Prospect Park</h6>
+                        <p class="channel-name">Rhododendrites</p>
+                        <div class="vid-dexcription__lower-text-container">
+                            <span>4.2K views </span><span>• 2 years ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
